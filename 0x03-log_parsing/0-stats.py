@@ -1,5 +1,6 @@
-#!/usr/bin/env python3
-""" A script that reads stdin line by line and computes metrics"""
+
+#!/usr/bin/python3
+'''a script that reads stdin line by line and computes metrics'''
 
 
 import sys
@@ -35,4 +36,3 @@ finally:
     for key, value in sorted(cache.items()):
         if value != 0:
             print('{}: {}'.format(key, value))
-
