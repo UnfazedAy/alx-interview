@@ -1,17 +1,14 @@
 #!/usr/bin/python3
-"""Task 0 module"""
+"""
+UTF-8 Validation
+"""
 
-from typing import List
 
-
-def validUTF8(data: List[int]) -> bool:
-    """ A function that checks whether the data given is a valid UTF8
-
-    Args:
-        data (List[int]): contains lists of integers to be checked
-
-    Returns:
-        bool: return true if the data is valid and false otherwise
+def validUTF8(data):
+    """
+    data: a list of integers
+    Return: True if data is a valid UTF-8
+    encoding, else return False
     """
     byte_count = 0
 
