@@ -1,6 +1,19 @@
 #!/usr/bin/python3
+"""Prime game module"""
+
+
 def isWinner(x, nums):
+    """
+    A function that determines the winner of the game
+    based on the rule which is that the player who doesn't
+    get to play fails and any number chosen must be prime
+    to be valid
+    """
     def get_primes(n):
+        """
+        Function to get a prime number using the
+         Sieve of Eratosthenes algorithm
+         """
         primes = [True] * (n + 1)
         primes[0] = primes[1] = False
         for i in range(2, int(n ** 0.5) + 1):
@@ -10,6 +23,7 @@ def isWinner(x, nums):
         return [i for i in range(n + 1) if primes[i]]
 
     def play_game(n):
+        """ Function to get player to play the game"""
         primes = get_primes(n)
         player = 1
         while primes:
